@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Vue general -->
+    <div id="contenedor">
+        <h1>Mi nombre es: {{nombre}}</h1>
+        <h2>Me gusta la: {{comida}}</h2>
+        <div v-html="htmlcontent"></div>
+        <img v-bind:src="img1" height="200px" width="auto">
+        
+    </div>
+    <!-- prueba componentes -->
+    <div id="c1">
+        <pruebacomponente></pruebacomponente>
+    </div>        
+    <div id="c2">
+        <pruebacomponente></pruebacomponente>
+    </div>
+    <!--Prueba componentes con funciones  -->
+    <div id="comFun">
+        <pruebacomponentefuncion>
+    </div>
+    <div id="comFun1">
+        <pruebacomponentefuncion>
+    </div>
+    <!-- Prueba componentes dinamicos -->
+    <div id="comDi">
+        <component v-bind:is="title"></component>
+    </div>
+    <!-- Prueba propiedades computadas -->
+    <div id="propiedadComputada">
+        FirstName: <input type="text" v-model="firstname" >
+        LastName: <input type="text" v-model="lastname" >
+        <h2>Mi nombre es:{{firstname}}{{lastname}}</h2>
+        <h2>Estoy usando la funcion computada: {{computadaFun}}</h2>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="/script/main.js" type="text/javascript"></script>
+</body>
+</html>
